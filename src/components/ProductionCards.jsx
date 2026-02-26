@@ -40,14 +40,17 @@ const ProductionCards = () => {
         }
     ]
     
-  return (
-    
-    <div className='flex gap-2 md:gap-5 p-2 px-5 md:px-16 md:py-12'> {ProductionCardList.map((item)=>( 
-    <div key={item.id} className='border-2 border-gray-600 rounded-lg hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer relative shadow-2xl shadow-black '>
-        
-         <video src={item.video} autoPlay loop playsInline muted className='absolute z-0 top-0 rounded-md opacity-0 hover:opacity-50'/> 
-         <img src={item.image} className='w-full z-1 opacity-100' /> </div> ))} </div>
-  )
+  // ProductionCards.jsx
+return (
+  <div className='grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-5 p-2 px-5 md:px-16 md:py-12'>
+     {ProductionCardList.map((item) => (
+       <div key={item.id} className='border-[2px] border-gray-600 rounded-lg hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer relative shadow-xl shadow-black'>
+          <video src={item.video} autoPlay loop playsInline muted className='absolute z-0 top-0 rounded-md opacity-0 hover:opacity-50 object-cover h-full w-full' />
+          <img src={item.image} className='w-full z-[1] opacity-100' />
+       </div>
+     ))}
+  </div>
+)
 }
 
 export default ProductionCards

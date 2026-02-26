@@ -30,12 +30,12 @@ const Slider = () => {
     <div>
         <HiChevronLeft className='hidden md:block text-white text-[30px] absolute mx-8 mt-[200px] cursor-pointer' onClick={()=>sliderLeft(elementRef.current)}/>
         <HiChevronRight className='hidden md:block text-white text-[30px] absolute mx-8 mt-[200px] cursor-pointer right-0' onClick={()=>sliderRight(elementRef.current)}/>
-    <div className='flex overflow-x-auto w-full px-16 py-4 scrollbar-hide scroll-smooth' ref={elementRef}>
+    <div className='flex overflow-x-auto w-full px-8 md:px-16 py-4 scrollbar-hide scroll-smooth' ref={elementRef}>
        {movieList.map((item) => (
     <img
         key={item.id}
         src={IMAGE_BASE_URL + item.backdrop_path}
-        className='min-w-full md:h-[400px] object-cover object-left-top mr-5 shadow-2xl rounded-md hover:border-3 border-gray-200 transition-all duration-100 ease-in'
+        className='min-w-full md:h-[400px] object-cover object-left-top mr-5 shadow-2xl rounded-md hover:border-[3px] border-gray-200 transition-all duration-100 ease-in'
     />
 ))}
     </div>
