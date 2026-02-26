@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <div className='flex justify-between items-center p-5 px-5 md:px-16'>
       
-        {/* Left Side: Logo and Desktop Menu */}
+       
         <div className='flex items-center gap-10'>
             <img src={logo} className='w-[80px] md:w-[115px] object-cover' />
             <div className='hidden md:flex gap-8'>
@@ -35,9 +35,9 @@ const Header = () => {
             </div>
         </div>
 
-        {/* Right Side: Hamburger and Profile Icon */}
+        
         <div className='flex items-center gap-5'>
-            {/* Mobile Hamburger - Hidden on Desktop */}
+            
             <div className='md:hidden' onClick={() => setToggle(!toggle)}>
                 {toggle ? 
                     <HiXMark className='text-white text-[32px] cursor-pointer' /> : 
